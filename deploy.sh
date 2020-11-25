@@ -1,12 +1,12 @@
 #!/bin/sh
-docker build -t rflf/multi-client -f ./client/Dockerfile ./client
-docker build -t rflf/multi-server -f ./server/Dockerfile ./server
-docker build -t rflf/multi-worker -f ./worker/Dockerfile ./worker
+docker build -t rflfrubix/multi-client -f ./client/Dockerfile ./client
+docker build -t rflfrubix/multi-server -f ./server/Dockerfile ./server
+docker build -t rflfrubix/multi-worker -f ./worker/Dockerfile ./worker
 
-docker push rflf/multi-client
-docker push rflf/multi-server
-docker push rflf/multi-worker
+docker push rflfrubix/multi-client
+docker push rflfrubix/multi-server
+docker push rflfrubix/multi-worker
 
 kubectl apply -f k8s
 
-kubectl rollout restart RESOURCE
+kubectl rollout restart deployments
