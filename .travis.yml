@@ -19,6 +19,7 @@ before_install:
 scripts: 
   - docker run -e CI=true rflfrubix/react-test npm test
 
+
 deploy:
   provider: script
   script: bash ./deploy.sh
