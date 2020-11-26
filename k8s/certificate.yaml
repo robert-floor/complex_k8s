@@ -11,10 +11,4 @@ spec:
   dnsNames:
     - robertfloor.com
     - www.robertfloor.com
-  acme:
-    config:
-      - http01:
-          ingressClass: nginx
-        domains:
-          - robertfloor.com
-          - www.robertfloor.com 
+  
