@@ -9,4 +9,3 @@ docker push rflfrubix/multi-worker
 
 kubectl apply -f k8s
 
-kubectl rollout restart deployments

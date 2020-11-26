@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: robertfloor-com-tls
+spec:
+  secretName: robertfloor-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: robertfloor.com
+  dnsNames:
+    - robertfloor.com
+    - www.robertfloor.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - robertfloor.com
+          - www.robertfloor.com 
